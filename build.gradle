@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+compileJava {
+    options.encoding = 'UTF-8'
+}
+compileTestJava {
+    options.encoding = 'UTF-8'
+}
+
+def selenideVersion = "6.11",
+    junitVersion = '5.9.2'
+
+dependencies {
+    testImplementation(
+            "com.codeborne:selenide:$selenideVersion",
+            "org.junit.jupiter:junit-jupiter:$junitVersion")
+    testRuntimeOnly(
+            "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
+    )
+}
+
+test {
+    useJUnitPlatform()
+}
