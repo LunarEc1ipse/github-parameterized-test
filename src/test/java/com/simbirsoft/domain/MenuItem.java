@@ -4,8 +4,6 @@ public enum MenuItem {
     CODE("Code", ""),
     ISSUES("Issues", "/issues");
 
-
-
     private final String menuName;
     private final String urlName;
 
@@ -17,6 +15,7 @@ public enum MenuItem {
     public String getMenuItem() {
         return menuName;
     }
+
     public String getUrlName() {
         return urlName;
     }
